@@ -198,6 +198,8 @@ Let's create a new post now! Restart your Express server, and fill in the `usern
 
 We should now see the new post on our web page!
 
+<img width="836" height="179" alt="image" src="https://github.com/user-attachments/assets/96b7a611-7b7a-405e-9d64-4cdd405878cf" />
+
 Just to make sure we added it to our database, let's re-upload our `database.db` file and see what shows up:
 
 <img width="1040" height="224" alt="image" src="https://github.com/user-attachments/assets/9f1f4085-9473-4693-97b8-68ce80d29290" />
