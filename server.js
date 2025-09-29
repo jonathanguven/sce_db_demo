@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 // API endpoint to get all posts
 app.get('/api/posts', (req, res) => {
-  db.all('SELECT * FROM Posts ORDER BY timestamp DESC', (err, rows) => {
+  db.all('WRITE YOUR SQL HERE!', (err, rows) => {
     if (err) {
       res.status(500).json({ error: err.message });
       return;
@@ -35,7 +35,8 @@ app.get('/api/posts', (req, res) => {
 // API endpoint to create a new post
 app.post('/api/posts', (req, res) => {
   const { username, message } = req.body;
-  db.run('INSERT INTO Posts (username, message) VALUES (?, ?)', [username, message], function(err) {
+  const sql = 'WRITE YOUR SQL HERE!';
+  db.run(sql, [username, message], function(err) {
     if (err) {
       res.status(500).json({ error: err.message });
       return;
@@ -47,7 +48,7 @@ app.post('/api/posts', (req, res) => {
 // API endpoint to delete a post
 app.delete('/api/posts/:id', (req, res) => {
   const postId = req.params.id;
-  db.run('DELETE FROM Posts WHERE id = ?', [postId], function(err) {
+  db.run('WRITE YOUR SQL HERE!', [postId], function(err) {
     if (err) {
       res.status(500).json({ error: err.message });
       return;
