@@ -13,13 +13,9 @@ const db = new sqlite3.Database('./db/database.db', (err) => {
 
 // Create Posts table if it doesn't exist
 const createPostsTable = () => {
+
   const sql = `
-    CREATE TABLE IF NOT EXISTS Posts (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      username TEXT NOT NULL,
-      message TEXT NOT NULL,
-      timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-    )
+    Write your SQL here!
   `;
 
   db.run(sql, (err) => {

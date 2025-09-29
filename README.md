@@ -145,7 +145,10 @@ Open `server.js` and you'll see three API endpoints that need SQL:
 **Current Code**:
 ```javascript
 app.get('/api/posts', (req, res) => {
-  db.all('WRITE YOUR SQL HERE!', (err, rows) => {
+
+  const sql = 'WRITE YOUR SQL HERE!';
+
+  db.all(sql, (err, rows) => {
     if (err) {
       res.status(500).json({ error: err.message });
       return;
@@ -177,9 +180,12 @@ SELECT * FROM Posts ORDER BY timestamp DESC
 
 **Current Code**:
 ```javascript
+// API endpoint to create a new post
 app.post('/api/posts', (req, res) => {
   const { username, message } = req.body;
+
   const sql = 'WRITE YOUR SQL HERE!';
+
   db.run(sql, [username, message], function(err) {
     if (err) {
       res.status(500).json({ error: err.message });
@@ -218,9 +224,13 @@ INSERT INTO Posts (username, message) VALUES (?, ?)
 
 **Current Code**:
 ```javascript
+// API endpoint to delete a post
 app.delete('/api/posts/:id', (req, res) => {
   const postId = req.params.id;
-  db.run('WRITE YOUR SQL HERE!', [postId], function(err) {
+
+  const sql = 'WRITE YOUR SQL HERE!';
+
+  db.run(sql, [postId], function(err) {
     if (err) {
       res.status(500).json({ error: err.message });
       return;
