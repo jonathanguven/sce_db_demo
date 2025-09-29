@@ -194,6 +194,16 @@ SELECT * FROM Posts ORDER BY timestamp DESC
 
 </details>
 
+Let's create a new post now! Restart your Express server, and fill in the `username` and `message` form fields, and click `submit`!
+
+We should now see the new post on our web page!
+
+Just to make sure we added it to our database, let's re-upload our `database.db` file and see what shows up:
+
+<img width="1040" height="224" alt="image" src="https://github.com/user-attachments/assets/9f1f4085-9473-4693-97b8-68ce80d29290" />
+
+Hooray! We did it!
+
 ### 4.2 POST /api/posts - Insert New Post
 
 **Goal**: Add a new post to the database with username and message.
