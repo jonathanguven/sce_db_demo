@@ -48,7 +48,7 @@ Our application uses a single table called `Posts` with the following structure:
 First, let's get the code on your machine:
 
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/jonathanguven/sce_db_demo.git)
 cd sce_db_demo
 ```
 
