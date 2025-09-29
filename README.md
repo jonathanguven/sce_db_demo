@@ -99,6 +99,8 @@ CREATE TABLE IF NOT EXISTS Posts (
 );
 ```
 
+Copy it and paste it in `db/db_init.js` under the `createPostsTable` function!
+
 ### Breaking Down the SQL
 
 - **`CREATE TABLE IF NOT EXISTS`**: Creates the table only if it doesn't already exist
@@ -164,6 +166,9 @@ app.get('/api/posts', (req, res) => {
 - Select all columns from the Posts table
 - Order the results by timestamp in descending order (newest first)
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
 **Solution**:
 ```sql
 SELECT * FROM Posts ORDER BY timestamp DESC
@@ -173,6 +178,8 @@ SELECT * FROM Posts ORDER BY timestamp DESC
 - `SELECT *`: Gets all columns from the table
 - `FROM Posts`: Specifies which table to query
 - `ORDER BY timestamp DESC`: Sorts by timestamp, newest first
+
+</details>
 
 ### 4.2 POST /api/posts - Insert New Post
 
@@ -203,6 +210,9 @@ app.post('/api/posts', (req, res) => {
 - Specify which columns to insert into
 - Use placeholders (?) for the values
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
 **Solution**:
 ```sql
 INSERT INTO Posts (username, message) VALUES (?, ?)
@@ -217,6 +227,8 @@ INSERT INTO Posts (username, message) VALUES (?, ?)
 - **Security**: Prevents SQL injection attacks
 - **Clean Code**: Separates SQL logic from data
 - **Reusability**: Same query works with different data
+
+</details>
 
 ### 4.3 DELETE /api/posts/:id - Delete Specific Post
 
@@ -251,6 +263,9 @@ app.delete('/api/posts/:id', (req, res) => {
 - Use a WHERE clause to specify which post to delete
 - Use a placeholder for the ID
 
+<details>
+<summary><strong>Click to reveal solution</strong></summary>
+
 **Solution**:
 ```sql
 DELETE FROM Posts WHERE id = ?
@@ -260,6 +275,8 @@ DELETE FROM Posts WHERE id = ?
 - `DELETE FROM Posts`: Specifies the table to delete from
 - `WHERE id = ?`: Only deletes rows where the id matches the provided value
 - The `?` placeholder is replaced with the actual post ID
+
+</details>
 
 ### Testing Your SQL
 
