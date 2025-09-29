@@ -48,7 +48,7 @@ Our application uses a single table called `Posts` with the following structure:
 First, let's get the code on your machine:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/jonathanguven/sce_db_demo.git
 cd sce_db_demo
 ```
 
@@ -63,7 +63,7 @@ npm install
 ```
 sce_db_demo/
 ├── db/
-│   └── database.db          # SQLite database file
+│   └── db_init.db           # Database initialization script
 ├── public/
 │   ├── index.html           # Frontend interface
 │   ├── styles.css           # Styling
@@ -122,7 +122,7 @@ Run the database initialization script:
 npm run init-db
 ```
 
-This will create the `Posts` table in your SQLite database.
+This will create the `Posts` table in your SQLite database under a file called `db/database.db`.
 
 ---
 
