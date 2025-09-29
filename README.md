@@ -126,6 +126,19 @@ npm run init-db
 
 This will create the `Posts` table in your SQLite database under a file called `db/database.db`.
 
+Now that our table is created, let's take a look at our database structure:
+
+Go to [this online SQLite viewer](https://sqliteviewer.app/)
+
+Drag and drop your .db file in!
+
+<img width="1208" height="817" alt="image" src="https://github.com/user-attachments/assets/27251af4-d76c-4fc5-8ae3-4e60af6e6d35" />
+
+You should see this in the database viewer:
+
+<img width="1091" height="263" alt="image" src="https://github.com/user-attachments/assets/9d46ef21-8340-4a2b-9ff9-6d4dc545620c" />
+
+From now on, whenever you execute a SQL query, just re-upload your `.db` file on the website to view your changes!
 ---
 
 ## 4. Write SQL for API Endpoints
